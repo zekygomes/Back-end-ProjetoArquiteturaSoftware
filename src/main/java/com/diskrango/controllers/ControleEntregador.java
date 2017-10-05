@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.diskrango.models.Entregador;
 import com.diskrango.models.dao.EntregadorDao;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @RestController
 @RequestMapping(value="/api/entregador")
 public class ControleEntregador {

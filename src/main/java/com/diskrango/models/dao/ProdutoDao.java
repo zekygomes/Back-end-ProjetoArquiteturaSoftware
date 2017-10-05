@@ -12,7 +12,11 @@ import org.springframework.stereotype.Repository;
 
 import com.diskrango.models.Cliente;
 import com.diskrango.models.Produto;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @Repository
 @Transactional
 public class ProdutoDao {

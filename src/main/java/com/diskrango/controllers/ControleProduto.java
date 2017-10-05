@@ -1,4 +1,5 @@
 package com.diskrango.controllers;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,11 @@ import com.diskrango.models.Produto;
 import com.diskrango.models.dao.ItemPedidoDao;
 import com.diskrango.models.dao.ProdutoDao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @RestController
 @RequestMapping(value="/api/produto")
 public class ControleProduto {

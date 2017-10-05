@@ -18,7 +18,11 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @Entity
 @Table(name="pedido")
 public class Pedido {

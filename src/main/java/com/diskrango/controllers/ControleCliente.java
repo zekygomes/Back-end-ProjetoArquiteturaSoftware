@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.diskrango.models.Cliente;
 import com.diskrango.models.dao.ClienteDao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @RestController
 @RequestMapping(value="/api/cliente")
 public class ControleCliente {

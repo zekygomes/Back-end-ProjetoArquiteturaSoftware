@@ -10,7 +10,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @Entity
 @Table(name = "itens_pedido")
 public class ItemPedido {

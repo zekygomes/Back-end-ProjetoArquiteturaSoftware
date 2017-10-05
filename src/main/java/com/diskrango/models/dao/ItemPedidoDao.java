@@ -10,7 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.diskrango.models.ItemPedido;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @Repository
 @Transactional
 public class ItemPedidoDao {

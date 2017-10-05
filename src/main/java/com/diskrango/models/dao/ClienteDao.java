@@ -12,7 +12,11 @@ import org.springframework.stereotype.Repository;
 
 import com.diskrango.models.Cliente;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * 
+ * @author Zeky and Maurício
+ *
+ */
 @Repository
 @Transactional
 public class ClienteDao {
