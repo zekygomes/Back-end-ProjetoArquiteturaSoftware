@@ -15,6 +15,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
+ * <h1>Entidade Cliente</h1>
+ * Classe que representa a entidade Clientes
+ * 
  * 
  * @author Zeky and Maurício
  *
@@ -65,11 +68,11 @@ public class Cliente {
 	@JsonCreator
 	public Cliente(@JsonProperty("idCliente")Long id, 
 			@JsonProperty("nome")String nome, 
-			@JsonProperty("emailCliente")String email, 
-			@JsonProperty("enderecoCliente")String endereco, 
-			@JsonProperty("telefoneCliente")String telefone, 
+			@JsonProperty("email")String email, 
+			@JsonProperty("endereco")String endereco, 
+			@JsonProperty("telefone")String telefone, 
 			@JsonProperty("pontoDeReferencia")String pontoDeReferencia, 
-			@JsonProperty("situacaoCliente")String situacaoCliente,
+			@JsonProperty("situacao")String situacaoCliente,
 			@JsonProperty("devolucaoCliente")Integer devolucaoCliente) {
 		this.id_cliente = id;
 		this.nome = nome;

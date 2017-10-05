@@ -13,6 +13,11 @@ import org.springframework.stereotype.Repository;
 import com.diskrango.models.Cliente;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
+ * <h1>Cliente DAO</h1>
+ * Classe que representa o Objeto de Acesso a Dados (DAO em inglês) da entidade Cliente.
+ * 
+ * <p>
+ * Executa os métodos Salvar; getAll; delete; getByName; getById; update.
  * 
  * @author Zeky and Maurício
  *
@@ -32,7 +37,7 @@ public class ClienteDao {
     getSession().save(cliente);
   }
   
-  public void apagar(Cliente cliente) {
+  public void delete(Cliente cliente) {
     getSession().delete(cliente);
   }
 

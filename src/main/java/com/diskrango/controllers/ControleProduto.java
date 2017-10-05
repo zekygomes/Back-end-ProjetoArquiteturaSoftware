@@ -28,7 +28,7 @@ public class ControleProduto {
   private ItemPedidoDao _itemPedidoDao;
 
   @RequestMapping(value="/salvar")
-  public String salvar(Long codProduto, String nome, double precoProduto,int qntEstoque, String tipoProduto) {
+  public String salvar(Long codProduto, String nome, String precoProduto,String qntEstoque, String tipoProduto) {
     try {
     	Produto produto = new Produto(codProduto, nome, precoProduto, qntEstoque, tipoProduto);
       _produtoDao.salvar(produto);
@@ -120,7 +120,7 @@ public class ControleProduto {
   }
   
   @RequestMapping(value="/atualizarEstoque")
-  public String atualizar(@RequestParam (value="codProduto",required=true)Long codProduto, @RequestParam (value="qntEstoque",required=true)int qntEstoque) {
+  public String atualizar(@RequestParam (value="codProduto",required=true)Long codProduto, @RequestParam (value="qntEstoque",required=true)String qntEstoque) {
     try {
     	Produto produto = getById(codProduto);
     	produto.atualizarEstoque(produto, qntEstoque);

@@ -31,13 +31,13 @@ public class Produto {
 	private String nome;
 
 	@Column(name="preco_produto")
-	private Double preco_produto;
+	private String preco_produto;
 	
 	@Column(name="tipo_produto")
 	private String tipo_produto;
 	
 	@Column(name="qnt_produto")
-	private Integer qnt_estoque;
+	private String qnt_estoque;
 	@JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "produto")
     private List<ItemPedido> itensPedido;
@@ -47,8 +47,8 @@ public class Produto {
     @JsonCreator
 	public Produto(@JsonProperty("codProduto")Long codProduto,
 			@JsonProperty("nome")String nome, 
-			@JsonProperty("precoProduto")Double precoProduto, 
-			@JsonProperty("qntEstoque")Integer qntEstoque, 
+			@JsonProperty("precoProduto")String precoProduto, 
+			@JsonProperty("qntEstoque")String qntEstoque, 
 			@JsonProperty("tipoProduto")String tipoProduto)  {
 		this.cod_produto = codProduto;
 		this.nome = nome;
@@ -67,7 +67,7 @@ public class Produto {
                 '}';
 	}
 	
-	public void atualizarEstoque(Produto produto, int qntEstoque){
+	public void atualizarEstoque(Produto produto, String qntEstoque){
 		produto.qnt_estoque = qntEstoque;
 	}
 
@@ -87,11 +87,11 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public Double getPreco_produto() {
+	public String getPreco_produto() {
 		return preco_produto;
 	}
 
-	public void setPreco_produto(Double preco_produto) {
+	public void setPreco_produto(String preco_produto) {
 		this.preco_produto = preco_produto;
 	}
 
@@ -103,11 +103,11 @@ public class Produto {
 		this.tipo_produto = tipo_produto;
 	}
 
-	public Integer getQnt_estoque() {
+	public String getQnt_estoque() {
 		return qnt_estoque;
 	}
 
-	public void setQnt_estoque(Integer qnt_estoque) {
+	public void setQnt_estoque(String qnt_estoque) {
 		this.qnt_estoque = qnt_estoque;
 	}
 

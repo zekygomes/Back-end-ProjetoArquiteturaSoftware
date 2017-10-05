@@ -11,6 +11,11 @@ import com.diskrango.models.Cliente;
 import com.diskrango.models.dao.ClienteDao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
+ * <h1>Controller Cliente</h1>
+ * Classe controle para fazer o CRUD da entidade Cliente
+ * 
+ * <p>
+ * Executa os métodos Salvar; getAll; delete; getByName; getById
  * 
  * @author Zeky and Maurício
  *
@@ -22,6 +27,21 @@ public class ControleCliente {
   @Autowired
   private ClienteDao _clienteDao;
   
+  /**
+   * 
+   * <h1>Salvar</h1>
+   * Metódo para adicionar dados no banco de dados
+   * 
+   * @param id 
+   * @param nome 
+   * @param email 
+   * @param endereco 
+   * @param telefone 
+   * @param pontoDeReferencia
+   * @param situacao
+   * @param devolucao
+   *
+   */
   @RequestMapping(value="/salvar")
   public String salvar(Long id, 
 		  String nome, 
@@ -53,7 +73,7 @@ public class ControleCliente {
   public String delete(@RequestParam (value="id",required=true)Long id) {
     try {
       Cliente cliente = getById(id);
-      _clienteDao.apagar(cliente);
+      _clienteDao.delete(cliente);
     }
     catch(Exception ex) {
       return ex.getMessage();
